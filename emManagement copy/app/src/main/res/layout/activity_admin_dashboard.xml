@@ -14,16 +14,19 @@
         android:text="Dashboard"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
 
     <!-- Settings Button -->
     <ImageView
         android:id="@+id/settingsButton"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:src="@drawable/ic_settings" <!-- Use a valid drawable -->
-    android:layout_alignParentEnd="true"
-    android:contentDescription="Settings"/>
+        android:src="@drawable/settings"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Settings" />
 
     <!-- User Profile Section -->
     <LinearLayout
@@ -40,7 +43,8 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:src="@drawable/profile_pic"
-        android:layout_marginEnd="16dp"/>
+            android:layout_marginEnd="16dp"
+            android:contentDescription="User Profile Picture" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -54,13 +58,16 @@
                 android:layout_height="wrap_content"
                 android:text="Welcome!"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/userRole"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Admin"/>
+                android:text="Admin"
+                android:textSize="16sp"
+                android:textStyle="italic" />
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +83,8 @@
                 android:textSize="12sp"
                 android:backgroundTint="@android:color/holo_blue_light"
                 android:textColor="@android:color/white"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:padding="8dp" />
 
             <Button
                 android:id="@+id/logoutButton"
@@ -85,7 +93,8 @@
                 android:text="Log out"
                 android:textSize="12sp"
                 android:backgroundTint="@android:color/holo_red_dark"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white"
+                android:padding="8dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -105,7 +114,9 @@
             android:layout_weight="1"
             android:text="Dashboard"
             android:backgroundTint="@android:color/holo_blue_dark"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:padding="8dp"
+            android:layout_marginEnd="4dp" />
 
         <Button
             android:id="@+id/notificationsButton"
@@ -114,7 +125,8 @@
             android:layout_weight="1"
             android:text="Notifications"
             android:backgroundTint="@android:color/holo_blue_dark"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Employee List -->
@@ -132,9 +144,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text="Add Employee"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
 </RelativeLayout>

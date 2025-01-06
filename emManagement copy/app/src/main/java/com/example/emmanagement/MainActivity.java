@@ -54,11 +54,14 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, role + " Login Successful", Toast.LENGTH_SHORT).show();
 
             // Navigate based on role
-            if (role.equals("admin")) {
+            if (role.equalsIgnoreCase("admin")) {
                 navigateToAdminDashboard();
-            } else if (role.equals("employee")) {
+            } else if (role.equalsIgnoreCase("employee")) {
                 navigateToEmployeeDashboard();
             }
+
+            // Finish the current activity to prevent going back to login
+            finish();
         } else {
             Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
         }
