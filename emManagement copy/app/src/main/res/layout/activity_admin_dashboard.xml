@@ -14,7 +14,6 @@
         android:text="Dashboard"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"
         android:layout_centerHorizontal="true"/>
 
     <!-- Settings Button -->
@@ -22,11 +21,9 @@
         android:id="@+id/settingsButton"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:src="@drawable/settings"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="Settings"/>
+        android:src="@drawable/ic_settings" <!-- Use a valid drawable -->
+    android:layout_alignParentEnd="true"
+    android:contentDescription="Settings"/>
 
     <!-- User Profile Section -->
     <LinearLayout
@@ -35,7 +32,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/dashboardTitle"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_vertical">
 
         <ImageView
@@ -43,7 +40,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:src="@drawable/profile_pic"
-            android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -63,7 +60,7 @@
                 android:id="@+id/userRole"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ali Ayman"/>
+                android:text="Admin"/>
         </LinearLayout>
 
         <LinearLayout
@@ -73,20 +70,22 @@
 
             <Button
                 android:id="@+id/editProfileButton"
-                android:layout_width="73dp"
-                android:layout_height="38dp"
-                android:layout_marginBottom="4dp"
-                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Edit"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/logoutButton"
-                android:layout_width="73dp"
-                android:layout_height="37dp"
-                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Log out"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -97,7 +96,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/userProfileSection"
-        android:layout_marginBottom="24dp">
+        android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/dashboardButton"
@@ -105,8 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Dashboard"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="@android:color/holo_purple"
+            android:backgroundTint="@android:color/holo_blue_dark"
             android:textColor="@android:color/white"/>
 
         <Button
@@ -115,145 +113,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Notifications"
-            android:backgroundTint="@android:color/holo_purple"
+            android:backgroundTint="@android:color/holo_blue_dark"
             android:textColor="@android:color/white"/>
     </LinearLayout>
 
     <!-- Employee List -->
-    <ScrollView
-        android:id="@+id/employeeListScrollView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_below="@id/navigationButtons"
-        android:layout_above="@id/addEmployeeButton">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/tahsin_reza"
-                    android:layout_marginEnd="16dp"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tahsin Reza"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Position: Dev"/>
-                </LinearLayout>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Edit details"
-                    android:backgroundTint="@android:color/darker_gray"
-                    android:textColor="@android:color/white"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/mark_m"
-                    android:layout_marginEnd="16dp"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Mark M."
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Position: Dev"/>
-                </LinearLayout>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Edit details"
-                    android:backgroundTint="@android:color/darker_gray"
-                    android:textColor="@android:color/white"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/jahin_khan"
-                    android:layout_marginEnd="16dp"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Jahin Khan"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Position: Dev"/>
-                </LinearLayout>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Edit details"
-                    android:backgroundTint="@android:color/darker_gray"
-                    android:textColor="@android:color/white"/>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_above="@id/addEmployeeButton"
+        android:layout_marginTop="16dp" />
 
     <!-- Add Employee Button -->
     <Button
@@ -261,10 +132,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@android:color/holo_blue_dark"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="Add Employee"
         android:textColor="@android:color/white" />
-
 </RelativeLayout>
