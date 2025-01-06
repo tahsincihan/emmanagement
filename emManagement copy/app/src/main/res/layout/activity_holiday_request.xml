@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/back"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Back" />
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Holiday Request"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Allowance Text -->
+    <TextView
+        android:id="@+id/allowanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Holiday Allowance: 30 days per year"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_below="@id/pageTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Input Fields Section -->
+    <LinearLayout
+        android:id="@+id/inputFieldsSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/allowanceText"
+        android:layout_marginTop="16dp">
+
+        <!-- From Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/fromDateInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Date"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Until Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Until:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/untilDateInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Date"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Return to Work Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Return to work:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/returnToWorkInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Date"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Reason for Request -->
+    <TextView
+        android:id="@+id/reasonTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason for request:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/inputFieldsSection"
+        android:layout_marginTop="16dp" />
+
+    <!-- Radio Buttons for Reasons -->
+    <RadioGroup
+        android:id="@+id/reasonRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/reasonTitle"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/sickLeaveRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sick Leave"/>
+
+            <RadioButton
+                android:id="@+id/funeralRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Funeral"
+                android:layout_marginStart="16dp" />
+
+            <RadioButton
+                android:id="@+id/vacationRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vacation"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/familyLeaveRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Family Leave" />
+
+            <RadioButton
+                android:id="@+id/medicalLeaveRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical Leave"
+                android:layout_marginStart="16dp" />
+
+            <RadioButton
+                android:id="@+id/personalRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Other Option -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/otherRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other" />
+
+            <EditText
+                android:id="@+id/otherReasonInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Specify other reason"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <!-- Send Button -->
+    <ImageButton
+        android:id="@+id/sendButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/send"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/reasonRadioGroup"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Send" />
+
+</RelativeLayout>

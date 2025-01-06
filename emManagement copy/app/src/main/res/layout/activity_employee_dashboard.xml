@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- User Profile Section -->
+    <LinearLayout
+        android:id="@+id/userProfileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/pageTitle"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/userPicture"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/tahsin_reza"
+            android:layout_marginEnd="16dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/greetingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/employeeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tahsin Reza"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/editProfileButton"
+                android:layout_width="73dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="4dp"
+                android:padding="2dp"
+                android:text="Edit"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="73dp"
+                android:layout_height="37dp"
+                android:padding="2dp"
+                android:text="Log out"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Navigation Tabs -->
+    <LinearLayout
+        android:id="@+id/navigationTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/userProfileSection"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/dashboardTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dashboard"
+            android:backgroundTint="@android:color/holo_purple"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/notificationsTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Notifications"
+            android:backgroundTint="@android:color/holo_purple"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Quick Actions -->
+    <LinearLayout
+        android:id="@+id/quickActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/navigationTabs"
+        android:layout_marginTop="32dp">
+
+        <!-- Holiday Request Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="32dp">
+
+            <ImageView
+                android:id="@+id/holidayRequestIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Holiday Request Icon"
+                android:src="@drawable/plane" />
+
+            <TextView
+                android:id="@+id/holidayRequestLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Holiday Request"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <!-- Preferences Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/preferencesIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/settings"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Preferences Icon"/>
+
+            <TextView
+                android:id="@+id/preferencesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferences"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
