@@ -40,10 +40,6 @@ The **Employee Management System (EMS)** is an Android application designed to h
 - Enhance error handling and improve overall user experience.
 - Refine UI elements for better usability.
 
-## 🧪 Testing
-
-Testing was limited due to the login crash. Key functionalities could not be tested fully. Future testing will focus on resolving bugs and improving usability.
-
 ## 📦 How to Run
 
 1. Clone this repository:  
