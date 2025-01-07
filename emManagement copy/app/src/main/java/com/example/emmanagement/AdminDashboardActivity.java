@@ -13,14 +13,14 @@ import retrofit2.Response;
 public class AdminDashboardActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private EmployeeAdapter adapter; // Assume this is your RecyclerView adapter for employees
+    private EmployeeAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dashboard);
 
-        recyclerView = findViewById(R.id.recyclerView); // Ensure you have a RecyclerView in your XML
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         fetchEmployees();

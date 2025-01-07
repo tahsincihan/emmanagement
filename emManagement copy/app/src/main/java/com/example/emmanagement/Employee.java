@@ -6,23 +6,23 @@ public class Employee {
     private String contact;
     private String address;
     private String email;
-    private String position;
+    private String department;
     private double salary;
     private String joiningDate;
 
-
     // Constructor
     public Employee(String firstname, String lastname, String contact, String address,
-                    String email, String position, double salary, String joiningDate) {
+                    String email, String department, double salary, String joiningDate) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.contact = contact;
         this.address = address;
         this.email = email;
-        this.position = position;
+        this.department = department;
         this.salary = salary;
         this.joiningDate = joiningDate;
     }
+
     // Getters and Setters
     public String getFirstname() {
         return firstname;
@@ -64,12 +64,12 @@ public class Employee {
         this.email = email;
     }
 
-    public String getPosition() {
-        return position;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     public double getSalary() {
