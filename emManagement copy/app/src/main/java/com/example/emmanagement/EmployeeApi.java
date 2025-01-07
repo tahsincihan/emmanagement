@@ -26,4 +26,13 @@ public interface EmployeeApi {
     // Delete an employee
     @DELETE("/employees/delete/{id}")
     Call<Void> deleteEmployee(@Path("id") int id);
+
+    @GET("/notifications")
+    Call<List<Notification>> getNotifications();
+
+    @POST("/notifications/send")
+    Call<Void> sendNotification(@Body Notification notification);
+
+
+
 }
